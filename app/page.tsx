@@ -13,6 +13,7 @@ import { MouseFollower } from "@/components/mouse-follower"
 import { ScrollProgress } from "@/components/scroll-progress"
 import { SectionHeading } from "@/components/section-heading"
 import { GlassmorphicCard } from "@/components/glassmorphic-card"
+import Image from "next/image"
 
 export default function Portfolio() {
   return (
@@ -121,7 +122,7 @@ export default function Portfolio() {
             <div className="relative">
               <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-crimson/20 to-mustard/20 blur-xl opacity-70"></div>
               <div className="relative aspect-square rounded-xl overflow-hidden border border-zinc-800">
-                <OptimizedImage
+                <Image
                   src="/me.jpg"
                   alt="Miguel Mercedes"
                   width={600}
