@@ -1,7 +1,7 @@
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowRight, Github, Linkedin, Mail, Phone, MapPin } from "lucide-react"
 
+import {OptimizedImage} from "@/components/optimized-image"
 import { Button } from "@/components/ui/button"
 import { ProjectCard } from "@/components/project-card"
 import { SkillBadge } from "@/components/skill-badge"
@@ -121,13 +121,13 @@ export default function Portfolio() {
             <div className="relative">
               <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-crimson/20 to-mustard/20 blur-xl opacity-70"></div>
               <div className="relative aspect-square rounded-xl overflow-hidden border border-zinc-800">
-                <Image
-                  src="https://drive.google.com/file/d/1lGF94WPcndrvl_267L7nP3CaFIpQGSop/view?usp=drive_link"
+                <OptimizedImage
+                  src="/me.jpg"
                   alt="Miguel Mercedes"
                   width={600}
                   height={600}
                   className="w-full h-full object-cover"
-                  quality={95}
+                  quality={100}
                   priority
                   placeholder="blur"
                   blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAAcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
