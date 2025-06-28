@@ -122,7 +122,7 @@ export default function Portfolio() {
               <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-crimson/20 to-mustard/20 blur-xl opacity-70"></div>
               <div className="relative aspect-square rounded-xl overflow-hidden border border-zinc-800">
                 <Image
-                  src="/miguel-photo.png"
+                  src="https://drive.google.com/file/d/1lGF94WPcndrvl_267L7nP3CaFIpQGSop/view?usp=drive_link"
                   alt="Miguel Mercedes"
                   width={600}
                   height={600}
