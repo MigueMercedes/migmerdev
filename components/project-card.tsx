@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { ArrowUpRight, Github } from "lucide-react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -38,10 +39,15 @@ export function ProjectCard({ title, description, tags, image, demoUrl, repoUrl 
         <div className="relative h-full flex flex-col">
           <div className="relative overflow-hidden h-48">
             <div className="absolute inset-0 bg-gradient-to-b from-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
-            <img
+            <Image
               src={image || "/placeholder.svg"}
               alt={title}
+              width={600}
+              height={400}
               className={`w-full h-full object-cover transition-transform duration-700 ${isHovered ? "scale-110" : "scale-100"}`}
+              quality={90}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
             />
           </div>
 

@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { ArrowRight, Github, Linkedin, Mail, Twitter } from "lucide-react"
+import Image from "next/image"
+import { ArrowRight, Github, Linkedin, Mail, Phone, MapPin } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { ProjectCard } from "@/components/project-card"
@@ -15,7 +16,7 @@ import { GlassmorphicCard } from "@/components/glassmorphic-card"
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-900 via-zinc-900 to-black text-white overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-charcoal via-zinc-900 to-black text-ash overflow-hidden">
       <MouseFollower />
       <ScrollProgress />
       <FloatingNav />
@@ -23,78 +24,70 @@ export default function Portfolio() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-crimson rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-mustard rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-cobalt rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
         </div>
 
         <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block">
               <div className="relative px-3 py-1 text-sm font-medium rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4">
-                <span className="relative z-10">Software Engineer & Creative Developer</span>
-                <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 animate-pulse"></span>
+                <span className="relative z-10">Full Stack Software Engineer</span>
+                <span className="absolute inset-0 rounded-full bg-gradient-to-r from-crimson/20 to-mustard/20 animate-pulse"></span>
               </div>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
               <span className="block">Hi, I'm</span>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-                Shine Kyaw Kyaw Aung
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-crimson to-mustard">
+                Miguel Mercedes
               </span>
             </h1>
             <p className="text-xl text-zinc-400 max-w-[600px]">
-              I craft exceptional digital experiences with code, creativity, and a passion for innovation.
+              Proactive Software Engineer with 3+ years of experience specializing in modern web applications using
+              Next.js, React, and Node.js. Passionate about delivering high-quality, efficient solutions.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button className="relative overflow-hidden group bg-gradient-to-r from-purple-500 to-pink-500 border-0">
+              <Button className="relative overflow-hidden group bg-gradient-to-r from-crimson to-mustard border-0 text-ash">
                 <span className="relative z-10 flex items-center">
                   View Projects <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-mustard to-crimson opacity-0 group-hover:opacity-100 transition-opacity"></span>
               </Button>
               <Button
                 variant="outline"
-                className="border-zinc-700 text-zinc-300 hover:text-white hover:border-zinc-500"
+                className="border-zinc-700 text-zinc-300 hover:text-ash hover:border-zinc-500 bg-transparent"
+                asChild
               >
-                Contact Me
+                <Link href="#contact">Contact Me</Link>
               </Button>
             </div>
             <div className="flex gap-4 pt-4">
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/MigueMercedes/" target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
+                  className="rounded-full bg-charcoal/50 hover:bg-charcoal text-zinc-400 hover:text-ash"
                 >
                   <Github className="h-5 w-5" />
                   <span className="sr-only">GitHub</span>
                 </Button>
               </Link>
-              <Link href="https://www.linkedin.com/in/shinekyawkyawaung/" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.linkedin.com/in/miguel-mercedes/" target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
+                  className="rounded-full bg-charcoal/50 hover:bg-charcoal text-zinc-400 hover:text-ash"
                 >
                   <Linkedin className="h-5 w-5" />
                   <span className="sr-only">LinkedIn</span>
                 </Button>
               </Link>
-              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <Link href="mailto:lmyguel0324@gmail.com">
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-                >
-                  <Twitter className="h-5 w-5" />
-                  <span className="sr-only">Twitter</span>
-                </Button>
-              </Link>
-              <Link href="mailto:hello@example.com">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
+                  className="rounded-full bg-charcoal/50 hover:bg-charcoal text-zinc-400 hover:text-ash"
                 >
                   <Mail className="h-5 w-5" />
                   <span className="sr-only">Email</span>
@@ -117,8 +110,8 @@ export default function Portfolio() {
       {/* About Section */}
       <section id="about" className="py-32 relative">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-crimson rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-64 h-64 bg-cobalt rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
         </div>
 
         <div className="container relative z-10">
@@ -126,12 +119,18 @@ export default function Portfolio() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-16">
             <div className="relative">
-              <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-xl opacity-70"></div>
+              <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-crimson/20 to-mustard/20 blur-xl opacity-70"></div>
               <div className="relative aspect-square rounded-xl overflow-hidden border border-zinc-800">
-                <img
-                  src="/placeholder.svg?height=600&width=600"
-                  alt="Shine Kyaw Kyaw Aung"
+                <Image
+                  src="/miguel-photo.png"
+                  alt="Miguel Mercedes"
+                  width={600}
+                  height={600}
                   className="w-full h-full object-cover"
+                  quality={95}
+                  priority
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAAcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 w-full p-6">
@@ -146,31 +145,35 @@ export default function Portfolio() {
             <div className="space-y-6">
               <GlassmorphicCard>
                 <p className="text-lg text-zinc-300">
-                  I'm a passionate software engineer with experience building web applications and digital products. I
-                  specialize in frontend development with React and Next.js, but I'm also comfortable working with
-                  backend technologies.
+                  I'm a passionate Full Stack Software Engineer from the Dominican Republic with over 3 years of
+                  experience developing high-performance, scalable web applications. I specialize in modern frontend
+                  frameworks like Next.js, React.js, and Angular, and backend technologies such as Node.js, Express,
+                  Nest.js, and .NET Core.
                 </p>
                 <p className="text-lg text-zinc-300 mt-4">
-                  My journey in tech started with a strong foundation in software development. I've worked with various
-                  companies to create intuitive, performant, and accessible digital experiences.
+                  Currently, I lead frontend and fullstack initiatives at Grupo Read, a healthcare group with 95+ years
+                  of experience. I focus on building scalable solutions, refactoring core systems, and implementing
+                  health-related platforms while maintaining rigorous code review standards and working in Agile (Scrum)
+                  environments.
                 </p>
                 <p className="text-lg text-zinc-300 mt-4">
-                  When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-                  and staying up-to-date with the latest industry trends.
+                  I'm passionate about clean code, performance optimization, and delivering solutions that generate
+                  real-world impact. I continuously learn new technologies and stay committed to writing efficient,
+                  maintainable software.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 mt-8">
                   <div className="space-y-1">
                     <div className="text-sm text-zinc-500">Name</div>
-                    <div className="font-medium">Shine Kyaw Kyaw Aung</div>
+                    <div className="font-medium">Miguel Angel Mercedes Lopez</div>
                   </div>
                   <div className="space-y-1">
                     <div className="text-sm text-zinc-500">Email</div>
-                    <div className="font-medium">hello@example.com</div>
+                    <div className="font-medium">lmyguel0324@gmail.com</div>
                   </div>
                   <div className="space-y-1">
                     <div className="text-sm text-zinc-500">Location</div>
-                    <div className="font-medium">Myanmar</div>
+                    <div className="font-medium">Santo Domingo, Dominican Republic</div>
                   </div>
                   <div className="space-y-1">
                     <div className="text-sm text-zinc-500">Availability</div>
@@ -179,7 +182,17 @@ export default function Portfolio() {
                 </div>
 
                 <div className="mt-8">
-                  <Button className="bg-zinc-800 hover:bg-zinc-700 text-white">Download Resume</Button>
+                  <Button
+                    className="bg-gradient-to-r from-crimson to-mustard hover:from-mustard hover:to-crimson text-ash"
+                    asChild
+                  >
+                    <Link
+                      href="https://drive.google.com/file/d/1Zhuc_5UsqwVcHJe5HFJyWbFGvvtsTuRh/view?usp=sharing"
+                      target="_blank"
+                    >
+                      Download Resume
+                    </Link>
+                  </Button>
                 </div>
               </GlassmorphicCard>
             </div>
@@ -190,26 +203,34 @@ export default function Portfolio() {
       {/* Skills Section */}
       <section id="skills" className="py-32 relative">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+          <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-cobalt rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-crimson rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
         </div>
 
         <div className="container relative z-10">
           <SectionHeading title="My Skills" subtitle="Technologies I work with" />
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-16">
-            <SkillBadge name="JavaScript" level={90} />
-            <SkillBadge name="TypeScript" level={85} />
-            <SkillBadge name="React" level={95} />
-            <SkillBadge name="Next.js" level={90} />
-            <SkillBadge name="Node.js" level={80} />
-            <SkillBadge name="HTML/CSS" level={95} />
-            <SkillBadge name="Tailwind CSS" level={90} />
-            <SkillBadge name="GraphQL" level={75} />
-            <SkillBadge name="PostgreSQL" level={70} />
-            <SkillBadge name="AWS" level={65} />
-            <SkillBadge name="Docker" level={60} />
-            <SkillBadge name="Git" level={85} />
+            <SkillBadge name="JavaScript" level={95} />
+            <SkillBadge name="TypeScript" level={95} />
+            <SkillBadge name="C#" level={85} />
+            <SkillBadge name="Next.js" level={95} />
+            <SkillBadge name="React.js" level={95} />
+            <SkillBadge name="Angular" level={85} />
+            <SkillBadge name="Node.js" level={90} />
+            <SkillBadge name="Express.js" level={90} />
+            <SkillBadge name="Nest.js" level={85} />
+            <SkillBadge name=".NET Core" level={80} />
+            <SkillBadge name="PostgreSQL" level={90} />
+            <SkillBadge name="MongoDB" level={85} />
+            <SkillBadge name="MySQL" level={80} />
+            <SkillBadge name="Prisma" level={85} />
+            <SkillBadge name="Drizzle ORM" level={85} />
+            <SkillBadge name="TypeORM" level={80} />
+            <SkillBadge name="TailwindCSS" level={95} />
+            <SkillBadge name="Redux" level={90} />
+            <SkillBadge name="React Query" level={85} />
+            <SkillBadge name="Docker" level={75} />
           </div>
         </div>
       </section>
@@ -217,8 +238,8 @@ export default function Portfolio() {
       {/* Projects Section */}
       <section id="projects" className="py-32 relative">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/4 left-1/3 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-yellow-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+          <div className="absolute top-1/4 left-1/3 w-64 h-64 bg-mustard rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-cobalt rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
         </div>
 
         <div className="container relative z-10">
@@ -226,52 +247,52 @@ export default function Portfolio() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
             <ProjectCard
-              title="E-commerce Platform"
-              description="A full-stack e-commerce platform built with Next.js, Stripe, and Prisma."
-              tags={["Next.js", "TypeScript", "Prisma", "Stripe"]}
+              title="Center Admin"
+              description="Complete appointment management platform for beauty and wellness centers with admin panel, service management, scheduling, and client booking system."
+              tags={["Next.js 15", "Drizzle ORM", "Shadcn UI", "TypeScript", "PostgreSQL"]}
               image="/placeholder.svg?height=400&width=600"
               demoUrl="https://example.com"
-              repoUrl="https://github.com"
+              repoUrl="https://github.com/MigueMercedes/"
             />
             <ProjectCard
-              title="Task Management App"
-              description="A collaborative task management application with real-time updates."
-              tags={["React", "Firebase", "Tailwind CSS", "Redux"]}
+              title="KYC System"
+              description="Complete Know Your Customer system built from scratch with document verification, identity validation, and compliance features for financial services."
+              tags={["React", "TS-Rest", "Node.js", "PostgreSQL", "Express"]}
               image="/placeholder.svg?height=400&width=600"
               demoUrl="https://example.com"
-              repoUrl="https://github.com"
+              repoUrl="https://github.com/MigueMercedes/"
             />
             <ProjectCard
-              title="AI Content Generator"
-              description="An AI-powered content generation tool using OpenAI's GPT models."
-              tags={["Next.js", "OpenAI API", "Node.js", "MongoDB"]}
+              title="Healthcare Platform"
+              description="Scalable health-related internal and external platforms for Grupo Read with patient management, appointment scheduling, and medical records."
+              tags={["Next.js", "Nest.js", "PostgreSQL", "Molecular.js", "Docker"]}
               image="/placeholder.svg?height=400&width=600"
               demoUrl="https://example.com"
-              repoUrl="https://github.com"
+              repoUrl="https://github.com/MigueMercedes/"
             />
             <ProjectCard
-              title="Fitness Tracker"
-              description="A mobile-first fitness tracking application with data visualization."
-              tags={["React Native", "TypeScript", "D3.js", "Firebase"]}
+              title="Provider Management System"
+              description="Internal and external healthcare provider system for Vital with comprehensive provider onboarding, management, and integration capabilities."
+              tags={["React", "Node.js", "PostgreSQL", "Redux", "TailwindCSS"]}
               image="/placeholder.svg?height=400&width=600"
               demoUrl="https://example.com"
-              repoUrl="https://github.com"
+              repoUrl="https://github.com/MigueMercedes/"
             />
             <ProjectCard
-              title="Weather Dashboard"
-              description="A beautiful weather dashboard with forecasts and historical data."
-              tags={["React", "Weather API", "Chart.js", "Styled Components"]}
+              title="Legacy System Refactor"
+              description="Complete refactoring of core legacy systems at Grupo Read, modernizing architecture and improving performance and maintainability."
+              tags={["Next.js", "TypeScript", "PostgreSQL", "System Architecture"]}
               image="/placeholder.svg?height=400&width=600"
               demoUrl="https://example.com"
-              repoUrl="https://github.com"
+              repoUrl="https://github.com/MigueMercedes/"
             />
             <ProjectCard
-              title="Portfolio Website"
-              description="This portfolio website built with Next.js and Tailwind CSS."
-              tags={["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript"]}
+              title="Full Stack Platform"
+              description="Enterprise-level platform built with modern stack including React Query, Redux, and comprehensive testing suite for Media Revolution."
+              tags={["React", "Redux", "React Query", "TailwindCSS", "Vite"]}
               image="/placeholder.svg?height=400&width=600"
               demoUrl="https://example.com"
-              repoUrl="https://github.com"
+              repoUrl="https://github.com/MigueMercedes/"
             />
           </div>
         </div>
@@ -280,8 +301,8 @@ export default function Portfolio() {
       {/* Experience Section */}
       <section id="experience" className="py-32 relative">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+          <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-crimson rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-cobalt rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
         </div>
 
         <div className="container relative z-10">
@@ -296,8 +317,8 @@ export default function Portfolio() {
       {/* Contact Section */}
       <section id="contact" className="py-32 relative">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-          <div className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-mustard rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+          <div className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-crimson rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
         </div>
 
         <div className="container relative z-10">
@@ -308,30 +329,48 @@ export default function Portfolio() {
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center">
-                    <Mail className="h-5 w-5 text-purple-400" />
+                  <div className="w-12 h-12 rounded-full bg-charcoal flex items-center justify-center">
+                    <Mail className="h-5 w-5 text-crimson" />
                   </div>
                   <div>
                     <div className="text-sm text-zinc-500">Email</div>
-                    <div className="font-medium">hello@example.com</div>
+                    <div className="font-medium">lmyguel0324@gmail.com</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center">
-                    <Linkedin className="h-5 w-5 text-purple-400" />
+                  <div className="w-12 h-12 rounded-full bg-charcoal flex items-center justify-center">
+                    <Phone className="h-5 w-5 text-crimson" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-zinc-500">Phone</div>
+                    <div className="font-medium">+1 849 220 2444</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-charcoal flex items-center justify-center">
+                    <MapPin className="h-5 w-5 text-crimson" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-zinc-500">Location</div>
+                    <div className="font-medium">Santo Domingo, Dominican Republic</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-charcoal flex items-center justify-center">
+                    <Linkedin className="h-5 w-5 text-crimson" />
                   </div>
                   <div>
                     <div className="text-sm text-zinc-500">LinkedIn</div>
-                    <div className="font-medium">linkedin.com/in/shinekyawkyawaung</div>
+                    <div className="font-medium">linkedin.com/in/miguel-mercedes</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center">
-                    <Github className="h-5 w-5 text-purple-400" />
+                  <div className="w-12 h-12 rounded-full bg-charcoal flex items-center justify-center">
+                    <Github className="h-5 w-5 text-crimson" />
                   </div>
                   <div>
                     <div className="text-sm text-zinc-500">GitHub</div>
-                    <div className="font-medium">github.com/shinekyawkyawaung</div>
+                    <div className="font-medium">github.com/MigueMercedes</div>
                   </div>
                 </div>
               </div>
@@ -355,49 +394,39 @@ export default function Portfolio() {
         <div className="container flex flex-col md:flex-row justify-between items-center gap-6">
           <div>
             <Link href="/" className="font-bold text-xl">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">Shine</span>
-              <span className="text-white">KKA</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-crimson to-mustard">Miguel</span>
+              <span className="text-ash">Mercedes</span>
             </Link>
             <p className="text-sm text-zinc-500 mt-2">
-              © {new Date().getFullYear()} Shine Kyaw Kyaw Aung. All rights reserved.
+              © {new Date().getFullYear()} Miguel Mercedes. All rights reserved.
             </p>
           </div>
           <div className="flex gap-4">
-            <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/MigueMercedes/" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="ghost"
                 size="icon"
-                className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
+                className="rounded-full bg-charcoal/50 hover:bg-charcoal text-zinc-400 hover:text-ash"
               >
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Button>
             </Link>
-            <Link href="https://www.linkedin.com/in/shinekyawkyawaung/" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.linkedin.com/in/miguel-mercedes/" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="ghost"
                 size="icon"
-                className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
+                className="rounded-full bg-charcoal/50 hover:bg-charcoal text-zinc-400 hover:text-ash"
               >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Button>
             </Link>
-            <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <Link href="mailto:lmyguel0324@gmail.com">
               <Button
                 variant="ghost"
                 size="icon"
-                className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-              >
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Button>
-            </Link>
-            <Link href="mailto:hello@example.com">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
+                className="rounded-full bg-charcoal/50 hover:bg-charcoal text-zinc-400 hover:text-ash"
               >
                 <Mail className="h-5 w-5" />
                 <span className="sr-only">Email</span>

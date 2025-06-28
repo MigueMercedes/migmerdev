@@ -26,33 +26,39 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#D72638", // Crimson Red
+          foreground: "#ECECEC", // Light Ash Gray
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "#1E1E1E", // Deep Charcoal
+          foreground: "#ECECEC", // Light Ash Gray
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "#1E1E1E", // Deep Charcoal
+          foreground: "#ECECEC", // Light Ash Gray
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "#FFC857", // Mustard Yellow
+          foreground: "#1E1E1E", // Deep Charcoal
         },
         popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: "#1E1E1E", // Deep Charcoal
+          foreground: "#ECECEC", // Light Ash Gray
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "#1E1E1E", // Deep Charcoal
+          foreground: "#ECECEC", // Light Ash Gray
         },
+        // Custom Tech Flame colors
+        crimson: "#D72638",
+        charcoal: "#1E1E1E",
+        ash: "#ECECEC",
+        mustard: "#FFC857",
+        cobalt: "#2E86AB",
       },
       borderRadius: {
         lg: "var(--radius)",
